@@ -31,7 +31,14 @@ include_directories(${SRC_DIR}/Bridge)
 
 include_directories(${LIBS_DIR}/JsonCpp/include)
 
-link_directories(${LIBS_DIR}/JsonCpp/ohos/${OHOS_ARCH})
+# The vendored archive is ARM64-only. Compile the same JsonCpp 1.9.5
+# implementation with the original renamed-namespace headers for each ABI.
+add_library(JsonCpp STATIC
+    ${LIBS_DIR}/JsonCpp/source/src/lib_json/json_reader.cpp
+    ${LIBS_DIR}/JsonCpp/source/src/lib_json/json_value.cpp
+    ${LIBS_DIR}/JsonCpp/source/src/lib_json/json_writer.cpp)
+target_include_directories(JsonCpp PRIVATE ${LIBS_DIR}/JsonCpp/include)
+set_target_properties(JsonCpp PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 file(GLOB_RECURSE BASE_SRC        "${SRC_DIR}/Base/*.cpp")
 file(GLOB_RECURSE ENGINE_IMAGE_SRC      "${SRC_DIR}/Engine/image/*.cpp")

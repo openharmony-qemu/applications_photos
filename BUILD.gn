@@ -1,0 +1,19 @@
+# Copyright (c) 2026 Harmony Contrib
+# SPDX-License-Identifier: Apache-2.0
+import("//build/ohos.gni")
+
+# Use the real fixed-release Stage provider, not the stale prebuilt Photos HAP.
+ohos_app("photos_hap") {
+  deps = []
+  certificate_profile = "signature/photos.p7b"
+  hap_name = "Photos"
+  part_name = "photos"
+  subsystem_name = "applications"
+  module_install_dir = "app/com.ohos.photos"
+  sdk_home = "//prebuilts/ohos-sdk/linux"
+  sdk_type_name = [ "sdk.dir" ]
+  assemble_type = "assembleHap"
+  build_level = "module"
+  build_modules = [ "phone_photos" ]
+  js_build_mode = "release"
+}

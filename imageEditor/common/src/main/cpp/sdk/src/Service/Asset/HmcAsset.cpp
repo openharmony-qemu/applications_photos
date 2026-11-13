@@ -411,7 +411,7 @@ BOOL IHmcAsset::Deserialize(const Json::Value &jsonData)
 
     JsonValueUtil::ParseValueIfHas(jsonData, DICT_KEY_ASSET_PROPERTY_SIZE, m_size);
     JsonValueUtil::ParseValueIfHas(jsonData, DICT_KEY_ASSET_PROPERTY_START, m_complexStartTime);
-    long int complexDuration;
+    Json::Value::Int64 complexDuration;
     if (JsonValueUtil::ParseValueIfHas(jsonData, DICT_KEY_ASSET_PROPERTY_DURATION, complexDuration)) {
         m_complexDuration.SetTime(complexDuration);
     }

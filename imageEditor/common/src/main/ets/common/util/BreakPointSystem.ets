@@ -17,9 +17,10 @@ import { ScreenManager } from './ScreenManager';
 import display from '@ohos.display';
 import { HiLog } from './HiLog';
 import { DeviceUtil } from './DeviceUtil';
-import lazy { TAG } from '@ohos/hypium/src/main/Constant';
 import { DEVICE_FOLD_STATUS, SCREEN_FOLD_ORIENTATION_PORTRAIT } from '../const';
 import { BroadCastManager } from '@ohos/common/src/main/ets/default/model/common/BroadCastManager';
+
+const TAG: string = 'BreakPointSystem';
 
 export class BreakPointSystem {
   public landscapeListener = mediaquery.matchMediaSync('(orientation: landscape)')

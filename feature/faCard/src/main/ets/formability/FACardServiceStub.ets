@@ -82,7 +82,7 @@ export default class FACardServiceStub {
   }
 
   private async initRdbStoreAndTrashAlbum() : Promise<void> {
-    if (!this.initialized) {
+    if (this.initialized) {
       return;
     }
 

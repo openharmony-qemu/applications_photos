@@ -15,7 +15,7 @@
 import lazy { DialogCallback } from '../../model/common/DialogUtil';
 import lazy { AlertDialog } from '@ohos.arkui.advanced.Dialog';
 import lazy { Log } from '../../utils/Log';
-import lazy { TAG } from '@ohos/hypium/src/main/Constant';
+const TAG: string = 'NetworkConnectionSwitchDialog';
 
 @CustomDialog
   /* instrument ignore file */

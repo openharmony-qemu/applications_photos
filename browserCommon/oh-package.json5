@@ -8,7 +8,7 @@
     "@ohos/tools": "file:../tools",
     "@ohos/common": "file:../common",
     "@ohos/privacy": "file:../feature/privacy",
-    "@ohos/lottie": "2.0.19",
+    "@ohos/lottie": "file:../lottie-2.0.19.har",
     "@oh-image-editor/editor-common": "file:../imageEditor/common"
   }
 }

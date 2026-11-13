@@ -24,7 +24,7 @@ import type common from '@ohos.app.ability.common';
 import lazy { VideoThumbnailWrapper } from './VideoThumbnailWrapper';
 import lazy photoAccessHelper from '@ohos.file.photoAccessHelper';
 import lazy { Log } from '../../../../utils/Log';
-import lazy { TAG } from '@ohos/hypium/src/main/Constant';
+const TAG: string = 'ImagePipeline';
 
 /**
  * 大图解码流水线
